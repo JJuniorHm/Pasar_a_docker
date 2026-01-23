@@ -1,0 +1,5 @@
+Array
+(
+    [coduser] => 0002
+    [pword] => admindenny
+)

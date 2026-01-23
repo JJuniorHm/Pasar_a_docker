@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Nunito-Regular'; /* Nombre que le das a la fuente */
+    src: url('fetes/Nunito-Regular.ttf') format('truetype'); /* Ruta al archivo .ttf */
+    /* Otros atributos opcionales */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.bdystle {
+  background-image: url('../imgnes/fdos/1.jpg');
+  margin: 0;
+  padding: 0;
+  position: relative;
+  min-height: 100vh; background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+* {
+    font-family: 'Nunito-Regular', sans-serif;
+    /* Puedes ajustar la fuente y otros estilos según tus preferencias */
+}
+
+  .dns_ctndorlgin { 
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .dns_ctndorlgin .dns_card_lgin {
+    position: relative;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    padding: 100px 40px 15px 40px;
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+  }
+  .dns_ctndorlgin .dns_card_lgin .dns_lgo {
+    position: absolute;
+    border: 1px solid #fff;
+    border-radius: 75px;
+    left: 50%;
+    top: 0px;
+    transform: translate(-50%, -50%); /* Ajustar para centrar */
+    background: url('../imgnes/lgos/lgocstec.png');
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 5px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  }
+  .dns_ctndorlgin .dns_card_lgin .dns_box_user{
+    display: flex; 
+    align-items: center;
+    margin: 10px 0;
+  }
+  .dns_ctndorlgin .dns_card_lgin .dns_box_user i{
+    font-size: 3.5rem;
+    color: #3a57e8;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  .dns_ctndorlgin .dns_card_lgin .dns_box_user input{
+    font-size: 1.1rem;
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    border: 0px solid #3a57e8; 
+    border-bottom: 2px solid #3a57e8;
+    outline: none;
+    background: rgba(255,255,255, 0.2);
+    color: #fff;
+    font-weight: 600;
+  }
+  .dns_ctndorlgin .dns_card_lgin .dns_box_user input:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+  .dns_ctndorlgin .dns_card_lgin .dns_box_user input::placeholder {
+    font-size: 1.1rem;
+    color: #fff;
+    font-weight: 600;
+  }
+
+
+  .dns_ctndorlgin .dns_card_lgin .dns_box_pword{
+    display: flex; 
+    align-items: center;
+    margin: 10px 0;
+  }
+  .dns_ctndorlgin .dns_card_lgin .dns_box_pword i{
+    font-size: 3.5rem;
+    color: #3a57e8;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-right: 5px;
+  }
+  .dns_ctndorlgin .dns_card_lgin .dns_box_pword input{
+    padding: 10px;
+    height: 50px;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    border: 0px solid #3a57e8; 
+    border-bottom: 2px solid #3a57e8;
+    outline: none;
+    background: rgba(255,255,255, 0.2);
+    color: #fff;
+  }
+  .dns_ctndorlgin .dns_card_lgin .dns_box_pword input:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  }
+
+  .dns_ctndorlgin .dns_card_lgin .dns_box_pword input::placeholder {
+    color: #fff;
+    font-weight: 600;
+  }
+
+  .dns_ctndorlgin .dns_card_lgin .dns_box_btnlgin {
+    display: flex;
+    justify-content: center;
+  }
+
+  .dns_ctndorlgin .dns_card_lgin .dns_box_btnlgin button {
+    background-color: #3a57e8;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }*/

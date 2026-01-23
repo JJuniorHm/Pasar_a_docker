@@ -1,0 +1,2025 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #E4E9F7;
+        overflow: hidden;
+    }
+
+    ::-webkit-scrollbar {
+        position: absolute;
+        left: 0;
+        width: 8px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #3a57e8;
+    }
+
+    ::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    /*Sidebar */
+    .dns_sdbar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 260px;
+        height: 100%;
+        background-color: #fff;
+        transition: all 0.5s ease;
+        box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+        z-index: 1;
+    }
+
+    .dns_sdbar .dns_sdbarul {
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        /*width: 260px;*/
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli {
+        padding: 10px 0;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .iocn-link {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        border: 0px solid #000;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .iocn-link a {
+        padding: 0px 24px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        border: 0px solid #000;
+        text-decoration: none;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli a,
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .arrow {
+        color: #2B3D4C;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .iocn-link i {
+        font-size: 30px;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .iocn-link span {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .iocn-link .arrow {
+        width: 20%;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .iocn-link .arrow i {
+        border: 0px solid #000;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli.active {
+        background-color: #0C2A98;
+        border-radius: 15px;
+        margin: 0 12px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli.active a,
+    .dns_sdbar .dns_sdbarul .dns_sdbarli.active .arrow i {
+        color: #fff;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli:hover {
+        background-color: #0C2A98;
+        border-radius: 15px;
+        margin: 0 12px;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    }
+
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli:hover {
+        border-radius: 0px;
+        margin: 0px;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli:hover a,
+    .dns_sdbar .dns_sdbarul .dns_sdbarli:hover .arrow i {
+        color: #fff;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .dns_sdbarsubrul {
+        opacity: 0;
+        display: none;
+        transition: all 0.5s ease;
+    }
+
+    .dns_sdbar .dns_sdbarul .tgesdbr {
+        text-align: right;
+        padding: 10px 0;
+        /*border:1px solid #000;*/
+    }
+
+    .dns_sdbar .dns_sdbarul .tgesdbr i {
+        font-size: 36px;
+        cursor: pointer;
+        border: 0px solid #000;
+        padding: 6px;
+        border-radius: 10px 0px 0px 10px;
+        color: #3a57e8;
+    }
+
+    .dns_sdbar .dns_sdbarul .tgesdbr i:hover {
+        background-color: #3a57e8;
+        color: #fff;
+    }
+
+    .dns_sdbar.close {
+        width: 78px;
+        /* Updated width for small dns_sdbar */
+    }
+
+
+    /*Submenu*/
+    .dns_sdbar.close .dns_sdbarul {
+        list-style: none;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1;
+        /*width: 260px;*/
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli {
+        position: relative;
+        padding: 10px 0;
+        cursor: pointer;
+        transition: all 0.4s ease;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .iocn-link {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        align-content: center;
+        border: 0px solid #000;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .iocn-link a {
+        padding: 0px 24px;
+        width: 80%;
+        display: flex;
+        align-items: center;
+        border: 0px solid #000;
+        text-decoration: none;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli a,
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .arrow {
+        color: #0C2A98;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .arrow {
+        border-left: 3px solid #fff;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .arrow {
+        border-left: 3px solid #fff;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .iocn-link i {
+        font-size: 30px;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .iocn-link span {
+
+        font-weight: 500;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .iocn-link .arrow {
+        width: 20%;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .iocn-link .arrow i {
+        border: 0px solid #000;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    /*Submenu*/
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli:hover {
+        background-color: #0C2A98;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli:hover a,
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli:hover .arrow i {
+        color: #fff;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .iocn-link span,
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .iocn-link .arrow {
+        opacity: 0;
+        position: absolute;
+        left: -100%;
+        color: #fff;
+        z-index: 4;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli:hover .iocn-link .dns_btnnme.dns_showbtnnme {
+        opacity: 1;
+        left: 100%;
+        color: #fff;
+        background-color: #0C2A98;
+        padding: 12px;
+        width: 200px;
+        border-radius: 0px 10px 10px 0px;
+    }
+
+    /*Submenu*/
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .show {
+        list-style: none;
+        opacity: 1;
+        padding: 10px 0;
+        border: 0px solid #000;
+        display: block;
+        text-align: center;
+        transition: all 0.5s ease;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .show li {
+        padding: 5px;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .show a {
+        color: #D1D1D1;
+        text-decoration: none;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .show li:hover {
+        margin: 0 10px;
+        border-radius: 10px;
+        background-color: #6277E5;
+    }
+
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .show li:hover span,
+    .dns_sdbar .dns_sdbarul .dns_sdbarli .show li:hover a {
+        color: #fff;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .show {
+        position: absolute;
+        left: 100%;
+        top: 42px;
+        opacity: 1;
+        display: block;
+        list-style: none;
+        background-color: #0C2A98;
+        text-align: center;
+        padding: 10px 0;
+        width: 200px;
+        border-radius: 0px 0px 15px 15px;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .show li {
+        padding: 5px;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .show a {
+        color: #D1D1D1;
+        text-decoration: none;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .show li:hover {
+        margin: 0 10px;
+        border-radius: 10px;
+        background-color: #6277E5;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .show li:hover span,
+    .dns_sdbar.close .dns_sdbarul .dns_sdbarli .show li:hover a {
+        color: #fff;
+    }
+
+    /*Submenu*/
+
+
+    .dns_sdbar.close .dns_sdbarul .tgesdbr {
+        position: relative;
+        height: 68px;
+    }
+
+    .dns_sdbar.close .dns_sdbarul .tgesdbr i {
+        position: absolute;
+        opacity: 0.2;
+        background-color: #3a57e8;
+        color: #fff;
+        border-radius: 10px 0px 0px 10px;
+        transform: rotateZ(180deg);
+    }
+
+    .dns_sdbar.close .dns_sdbarul .tgesdbr i:hover {
+        opacity: 1;
+    }
+
+
+
+
+    .dns_pgesston {
+        position: relative;
+        background: #E4E9F7;
+        height: 101vh;
+        left: 280px;
+        width: calc(100% - 280px);
+        transition: all 0.5s ease;
+        overflow-x: hidden;
+    }
+
+    .dns_sdbar.close~.dns_pgesston {
+        left: 100px;
+        width: calc(100% - 100px);
+    }
+
+
+
+    @media(max-width: 991px) {
+        .dns_sdbar {
+            position: fixed;
+            left: -280px;
+        }
+
+        .dns_pgesston {
+            position: static;
+            width: 100%;
+        }
+
+        .dns_sdbar .dns_sdbarul .tgesdbr {
+            position: relative;
+            height: 60px;
+        }
+
+        .dns_sdbar .dns_sdbarul .tgesdbr i {
+            position: absolute;
+            left: 280px;
+            bottom: 0;
+            background-color: #3a57e8;
+            color: #fff;
+            border-radius: 10px 0px 0px 10px;
+            transform: rotateZ(180deg);
+        }
+
+        .dns_sdbar.close {
+            width: 260px;
+            /* Updated width for small dns_sdbar */
+            left: 0;
+            transition: left 0.5s ease;
+        }
+
+        .dns_sdbar.close~.dns_pgesston {
+            left: 260px;
+            width: 100%;
+        }
+
+        .dns_sdbar.close .dns_sdbarul .tgesdbr i {
+            position: static;
+            left: 228px;
+            opacity: 1;
+            background-color: #3a57e8;
+            color: #fff;
+            border-radius: 10px 0px 0px 10px;
+            transform: rotateZ(0deg);
+        }
+
+        .dns_sdbar.close .dns_sdbarul .tgesdbr i:hover {
+            opacity: 1;
+        }
+
+        .dns_sdbar.close .dns_sdbarul .dns_sdbarli .iocn-link span,
+        .dns_sdbar.close .dns_sdbarul .dns_sdbarli .iocn-link .arrow {
+            opacity: 1;
+            position: static;
+            left: -0%;
+            color: #3a57e8;
+        }
+
+        .dns_sdbar.close .dns_sdbarul .dns_sdbarli:hover .iocn-link span,
+        .dns_sdbar.close .dns_sdbarul .dns_sdbarli:hover .iocn-link .arrow {
+            color: #fff;
+        }
+
+
+        .dns_sdbar.close .dns_sdbarul .dns_sdbarli .show {
+            position: static;
+            list-style: none;
+            opacity: 1;
+            padding: 10px 0;
+            border: 0px solid #000;
+            display: block;
+            text-align: center;
+            width: auto;
+            border-radius: 0;
+            box-shadow: none;
+        }
+
+        .dns_sdbar.close .dns_sdbarul .dns_sdbarli:hover .iocn-link .dns_btnnme.dns_showbtnnme {
+            opacity: 1;
+            left: 100%;
+            color: #fff;
+            background-color: transparent;
+            padding: 0;
+            width: auto;
+            border-radius: 0;
+        }
+    }
+
+    /*End Sidebar */
+
+    /*Section Header*/
+    .dns_stonhader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 6px 5px rgba(0,0,0,.08);
+    margin-bottom: 20px;
+}
+
+.dns_stonhader .dns_infouser {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.dns_stonhader .dns_infouser span {
+    font-weight: 650;
+    color: #25396f;
+    font-size: 18px;
+}
+
+.dns_stonhader .dns_infouser a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #eef2ff;
+    text-decoration: none;
+    transition: .2s;
+}
+
+.dns_stonhader .dns_infouser a:hover {
+    background: #3a57e8;
+}
+
+.dns_stonhader .dns_infouser a i {
+    font-size: 1.9rem;
+    color: #3a57e8;
+    transition: .2s;
+}
+
+.dns_stonhader .dns_infouser a:hover i {
+    color: #ffffff;
+}
+
+
+    /*End Section Header*/
+
+
+    /*  .mdl-knbn { Modal para actualizar el Kanban
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 9999;
+  }
+  .modal-content {
+      background-color: #fefefe;
+      margin: 15% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 20%;
+  }
+  .closes {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+  }*/
+
+    /*Kanban*/
+    /*Box Kanban*/
+    .dns_boxkban {
+        margin: 10px 0;
+        padding: 10px 15px;
+        background: #fff;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+    }
+
+    .dns_boxkban .dns_btnpgeefcecy {
+        background: #0C2A98;
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 10px;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .dns_boxkban .dns_btnnewrgter {
+        background: linear-gradient(90deg, rgba(255, 100, 14, .8), rgba(255, 48, 0, 1));
+        background: -webkit-linear-gradient(left, rgba(255, 100, 14, .8), rgba(255, 48, 0, 1));
+        background: -webkit-gradient(linear, left top, right top, from(rgba(255, 100, 14, 1)), to(rgba(255, 48, 0, 1)));
+        padding: 10px;
+        margin: 0 5px;
+        border-radius: 10px;
+        border: none;
+        color: #fff;
+        font-weight: 600;
+    }
+
+    .dns_boxkban .dns_sarchtask {
+        padding: 5px 10px;
+        margin: 0 5px;
+        border: 2px solid #2B3D4C;
+        border-radius: 10px;
+        outline: none;
+        font-weight: 600;
+    }
+
+    @media(max-width: 575px) {
+        .dns_boxkban .dns_sarchtask {
+            width: 100%;
+        }
+    }
+
+    /*End Box Kanban*/
+
+    .dns_ctinerknban {
+        position: relative;
+    }
+
+    .dns_ctinerknban .dns_arrowleftkban {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        left: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.2);
+        height: 100%;
+        opacity: 0;
+        transition: 0.3s;
+        /*	z-index: 1;*/
+    }
+
+    .dns_ctinerknban .dns_arrowleftkban:hover {
+        opacity: 1;
+    }
+
+    .dns_ctinerknban .dns_arrowleftkban i {
+        font-size: 4rem;
+    }
+
+    .dns_ctinerknban .dns_arrowrightkban {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        right: 0;
+        top: 0;
+        background: rgba(0, 0, 0, 0.2);
+        height: 100%;
+        opacity: 0;
+        transition: 0.3s;
+        /*  	z-index: 1;*/
+    }
+
+    .dns_ctinerknban .dns_arrowrightkban:hover {
+        opacity: 1;
+    }
+
+    .dns_ctinerknban .dns_arrowrightkban i {
+        font-size: 4rem;
+    }
+
+    .dns_ctinerknban .dns_boardkban {
+        display: flex;
+        overflow: auto;
+        height: 84vh;
+    }
+
+    .dns_ctinerknban .dns_boardkban .dns_clumnkban {
+        width: 300px;
+    }
+
+    .dns_ctinerknban .dns_boardkban .dns_clumnkban h6 {
+        background-color: #25396f;
+        border-radius: 10px;
+        padding: 6px 10px;
+        margin: 0px 10px 0px 0px;
+        color: #fff;
+        width: 290px;
+        -webkit-box-shadow: 0 2px 8.5px -3px #000000;
+        -moz-box-shadow: 0 2px 8.5px -3px #000000;
+        box-shadow: 0 2px 8.5px -3px #000000;
+    }
+
+    .dns_ctinerknban .dns_boardkban .dns_clumnkban .dns_ctinerclumn {
+        width: 300px;
+        padding: 10px;
+        border-left: 1px solid #ccc;
+        margin-right: 10px;
+        height: 78vh;
+        overflow: auto;
+    }
+
+    .dns_ctinerknban .dns_boardkban .dns_clumnkban .dns_ctinerclumn::-webkit-scrollbar {
+        position: absolute;
+        left: 0;
+        width: 8px;
+    }
+
+    .dns_ctinerknban .dns_boardkban .dns_clumnkban .dns_ctinerclumn::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        background-color: #3a57e8;
+    }
+
+    .dns_ctinerknban .dns_boardkban .dns_clumnkban .dns_ctinerclumn::-webkit-scrollbar-track {
+        background-color: transparent;
+    }
+
+    .dns_ctinerknban .dns_boardkban .dns_clumnkban .dns_ctinerclumn .dns_cardkban {
+        background-color: #f9f9f9;
+        padding: 10px;
+        /* border: 1px solid #ccc; */
+        margin-bottom: 10px;
+        border-radius: 10px;
+        cursor: move;
+    }
+
+    .dns_ctinerknban .dns_boardkban .dns_clumnkban .dns_ctinerclumn .dns_cardkban:hover {
+        background-color: #f9f9f9;
+        padding: 10px;
+        box-shadow: rgba(58, 87, 232, 0.18) 0px 4px 8px;
+        /* border: 1px solid #ccc; */
+        margin-bottom: 10px;
+        border-radius: 10px;
+        cursor: move;
+    }
+
+    .dns_ctinerknban .dns_boardkban .dns_clumnkban .dns_ctinerclumn .dns_cardkban .dns_infotask {
+        color: #25396f;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    .dns_ctinerknban .dns_boardkban .dns_clumnkban span {
+        color: #7c8db5;
+        font-size: 0.8rem;
+        font-weight: 500;
+    }
+
+    .task-placeholder {
+        background-color: lightgray;
+        border: 2px dashed gray;
+        color: gray;
+        transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+
+    .dns_nberclumn {
+        display: none;
+    }
+
+        /*Kanban*/
+    
+        /* Ventana Derecha */
+        /*        .dns-ctndr-udtegarcconModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 9999;
+            }
+    
+            .dns-ctndr-udtegarcconModal .dns-div-drca .dns-ctndor-btnes-udtegarccon {
+        display: flex;
+        justify-content: space-between;
+            }*/
+    
+        /*        .dns-ipmirgarcconModal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 10000;
+            }*/
+    
+        /*        .dns-ipmirgarccon-div-drca {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 87%;
+            height: 100%;
+        background-color: #F2F6FF;
+            padding: 20px;
+            box-sizing: border-box;
+            transition: transform 0.3s ease-in-out;
+            transform: translateX(100%);
+            }
+    
+            .dns-ipmirgarccon-div-drca.open {
+            transform: translateX(0);
+            }*/
+
+    .dns_csemdalr {
+        /*bcmr = button close modal right* - para el modal derecho*/
+        outline: none;
+        background-color: #3a57e8;
+        color: #fff;
+        padding: 10px;
+        border: 0px;
+        border-radius: 10px 0 0 10px;
+        font-weight: 600;
+    }
+
+
+    .dns_bgundmdal {
+        /*Fondo modal*/
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+    }
+
+    .dns_ctnermdalr {
+        /*Contenedor modal derecha*/
+        display: flex;
+        flex-direction: column;
+        top: 0;
+        right: 0;
+        width: 87%;
+        height: 100%;
+        background-color: #F1F4FF;
+        box-sizing: border-box;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        color: #2B3D4C;
+        z-index: 2;
+        position: fixed;
+    }
+
+    .dns_ctnermdalr .dns_hadermdalr {
+        /*Contenedor modal derecha*/
+        padding: 15px;
+    }
+
+    .dns_ctnermdalr .dns_bodymdalr {
+        /*Contenedor modal derecha*/
+        padding: 15px;
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    .dns_ctnermdalr .dns_bodymdalr .dns_bodyctndor {
+        /*Contenedor modal derecha*/
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 15px;
+        -webkit-box-shadow: 0 2.5px 10px -2.5px rgba(106, 116, 220, 0.7);
+        -moz-box-shadow: 0 2.5px 10px -2.5px rgba(106, 116, 220, 0.7);
+        box-shadow: 0 2.5px 10px -2.5px rgba(106, 116, 220, 0.7);
+    }
+
+    .dns_ctnermdalr .dns_bodymdalr .dns_ctnerform {
+        display: flex;
+        align-items: center;
+        padding: 5px;
+    }
+
+    .dns_ctnermdalr .dns_bodymdalr .dns_ctnerform .tox-tinymce {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+
+    .dns_ctnermdalr .dns_bodymdalr .dns_ctnerform .tox-tinymce .tox-editor-container {
+        width: 100%;
+    }
+
+    .dns_ctnermdalr .dns_bodymdalr .dns_ctnerform .tox-tinymce .tox-statusbar {
+        width: 100%;
+    }
+
+    .dns_ctnermdalr .dns_bodymdalr .dns_ctnerform .dns_dtnbretra {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid #CED4DA;
+        outline: none;
+        padding: 20px;
+    }
+
+    .dns_ctnermdalr .dns_bodymdalr .dns_ctnerform .dns_dtdccon {
+        width: 100%;
+        border: 0;
+        border-bottom: 1px solid #CED4DA;
+        outline: none;
+        padding: 20px;
+    }
+
+    .dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfile,
+    .dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfiletocomments {
+        display: flex;
+        background-color: #F8F9FA;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 15px 0;
+    }
+
+    .dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfile .dns_ctneruploadfile,
+    .dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfiletocomments .dns_ctneruploadfile {
+    padding: 0 5px;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfile .dns_ctneruploadfile .dns_btnuploadfile,
+.dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfiletocomments .dns_ctneruploadfile .dns_btnuploadfile {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .09);
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfile .dns_ctneruploadfile .dns_btnuploadfile:hover,
+.dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfiletocomments .dns_ctneruploadfile .dns_btnuploadfile:hover {
+    box-shadow: rgba(58, 87, 232, 0.18) 0px 4px 6px;
+    transform: scale(1.05);
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfile .dns_ctneruploadfile .dns_btnuploadfile i,
+.dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfiletocomments .dns_ctneruploadfile .dns_btnuploadfile i {
+    font-size: 2rem;
+    color: #3a57e8;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfile .dns_ctnerfiles,
+.dns_ctnermdalr .dns_bodymdalr .dns_taskuploadfiletocomments .dns_ctnerfiles {
+    padding: 0 5px;
+    display: flex;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.dns_ctnerbtndownloadfile {
+    position: relative;
+}
+
+.dns_ctnerbtndownloadfile .bx-x {
+    position: absolute;
+    right: 2px;
+    top: 2px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.dns_ctnerbtndownloadfile .bx-x:hover {
+    background-color: #3A57E8;
+    color: #fff;
+}
+
+.dns_ctnerbtndownloadfile .dns_btndownloadfile {
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    border: none;
+    background-color: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .09);
+    font-weight: 600;
+    transition: 0.2s ease-in-out;
+    margin: 0 2px;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.dns_ctnerbtndownloadfile .dns_btndownloadfile .bxs-file {
+    font-size: 3.0rem;
+    background-image: linear-gradient(to top, #2b7c00, #2e8300, #318a01, #349201, #379902);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.dns_ctnerbtndownloadfile .dns_btndownloadfile .bxs-file-doc {
+    font-size: 3.5rem;
+    background-image: linear-gradient(to top, #002b7c, #012f83, #02348a, #023892, #023d99);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.dns_ctnerbtndownloadfile .dns_btndownloadfile .bxs-file-pdf {
+    font-size: 3.5rem;
+    background-image: linear-gradient(to top, #ac0101, #b1000a, #b60013, #bb001b, #c00022);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.dns_ctnerbtndownloadfile .dns_btndownloadfile .dns_ttledownloadfile {
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons {
+    background-color: #F8F9FA;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 15px 0;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform #dtcdgorpsble {
+    display: none;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform .dns_dtctndorltarpsble {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform .dns_dtctndorltarpsble .dns_ltarpsble {
+    background-color: #fff;
+    border: 1px solid #CED4DA;
+    border-radius: 0px 0 10px 10px;
+    margin: 0 15px;
+    padding: 10px 15px;
+    max-height: 250px;
+    overflow-x: auto;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform .dns_dtctndorltarpsble .dns_ltarpsble .dns_dtdteuser {
+    cursor: pointer;
+    padding: 4px 6px;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform .dns_dtctndorltarpsble .dns_ltarpsble .dns_dtdteuser.slect {
+    background-color: #E8F0FE;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform .dns_dtctndorltarpsble .dns_ltarpsble .dns_dtdteuser:hover {
+    background-color: #E8F0FE;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform .dns_dtctndorltarpsble .dns_ltarpsble .dns_dtdteuser .dtecdgo {
+    display: none;
+}
+
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform .dns_dtctndorltarpsble.show {
+    opacity: 1;
+}
+
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform input,
+.dns_ctnermdalr .dns_bodymdalr .dns_taskotons .dns_ctnerform select {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border: 1px solid #CED4DA;
+    border-radius: 5px;
+}
+
+.dns_ctnermdalr.open {
+    transform: translateX(0);
+}
+
+.dns_ctnermdalr .dns_csemdalr {
+    position: absolute;
+    top: -50px;
+    left: 0px;
+}
+
+.dns_ctnermdalr.open .dns_csemdalr {
+    left: -64px;
+    top: 10px;
+}
+
+.dns_ctnermdalr .dns_fdermdal {
+    justify-content: center;
+    width: 100%;
+    padding: 15px;
+    background-color: #fff;
+}
+
+.dns_btncsemdal {
+    outline: none;
+    background-color: #3a57e8;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.dns_btnsave {
+    outline: none;
+    background: linear-gradient(90deg, rgba(255, 100, 14, .8), rgba(255, 48, 0, 1));
+    background: -webkit-linear-gradient(left, rgba(255, 100, 14, .8), rgba(255, 48, 0, 1));
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 100, 14, 1)), to(rgba(255, 48, 0, 1)));
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.dns_btnclose {
+    outline: none;
+    background-color: #3a57e8;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.dns_btnsvetask {
+    outline: none;
+    background: linear-gradient(90deg, rgba(255, 100, 14, .8), rgba(255, 48, 0, 1));
+    background: -webkit-linear-gradient(left, rgba(255, 100, 14, .8), rgba(255, 48, 0, 1));
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 100, 14, 1)), to(rgba(255, 48, 0, 1)));
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.dns_btnsubmit {
+    outline: none;
+    background: linear-gradient(90deg, rgba(255, 100, 14, .8), rgba(255, 48, 0, 1));
+    background: -webkit-linear-gradient(left, rgba(255, 100, 14, .8), rgba(255, 48, 0, 1));
+    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 100, 14, 1)), to(rgba(255, 48, 0, 1)));
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+@media(max-width: 575px) {
+    .dns_ctnermdalr {
+        width: 100%;
+    }
+
+    .dns_ctnermdalr.open .dns_csemdalr {
+        left: 80%;
+        top: 10px;
+        border-radius: 10px;
+    }
+
+    .dns_ctnermdalr .dns_fdermdal {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+
+
+/*        .dns-nevoceteModal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10000;
+        }*/
+
+
+
+/*        .dns-brraudtegr {
+        display: flex;
+        justify-content:center;
+        width: 87%;
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        padding: 15px;
+        background-color: #fff;
+        box-sizing: border-box;
+        
+        transition: all 0.3s ease;
+        transition-delay: 0.3s;
+        }*/
+
+/*        .dns-brragadarcete {
+        display: flex;
+        justify-content:center;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        padding: 15px;
+        background-color: #fff;
+        }*/
+
+/*        .nevagrtastckModal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 9999;
+        }*/
+
+/*        .nevaceteModal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 10000;
+        }*/
+
+/*        .dns-divdrcha-nevocete {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 87%;
+        height: 100%;
+        background-color: #f1f1f1;
+        padding: 20px;
+        box-sizing: border-box;
+        transition: transform 0.3s ease-in-out;
+        transform: translateX(100%);
+        }
+
+        .dns-divdrcha-nevocete.open {
+        transform: translateX(0);
+        }*/
+
+.dns_ctnermdalr.open {
+    transform: translateX(0);
+}
+
+.dns_ctnermdalr .ctndrifodtosga {
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.dns_ctnermdalr .ctndrifodtosga .ctndornp {
+    border: 1px solid #EDEEF0;
+    /*box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;*/
+    border-radius: 5px;
+    color: #25396f;
+    font-weight: 500;
+    max-width: 100%;
+}
+
+.dns_ctnermdalr .ctndrifodtosga .ctndornp #dttdccon {
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.dns_ctnermdalr .ctndrifodtosga .ctndornp #dttdccon img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dns_ctnermdalr .ctndrifodtosga .ctndornp textarea {
+    color: #25396f;
+    font-weight: 500;
+}
+
+.dns_ctnermdalr #ctndordt {
+    padding: 10px;
+    /*border: 1px solid #EDEEF0;*/
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px;
+    border-radius: 5px;
+    background-color: #fff;
+    color: #2067B0;
+}
+
+.dns_ctnermdalr label {
+    color: #7c8db5;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.dns_ctnermdalr #dtigarccon {
+    color: #25396f;
+}
+
+.dns-btncse {
+    position: absolute;
+    left: -80px;
+    top: 0;
+    background-color: #003CC2;
+    border-radius: 15px 0 0 15px;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Ventana Derecha */
+
+/* Time Line Task */
+.dns-ctndorlneatepo .dns-fcha {
+    display: flex;
+    justify-content: center;
+}
+
+.dns-ctndorlneatepo .dns-fcha span {
+    background-color: #DDE5E8;
+    color: #6E7273;
+    padding: 0 10px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    box-shadow: rgba(58, 87, 232, 0.18) 0px 2px 4px;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo {
+    position: relative;
+    background-color: #fff;
+    box-shadow: rgba(58, 87, 232, 0.18) 0px 2px 4px;
+    border-radius: 15px;
+    padding: 12px 18px;
+    margin: 10px 0;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo textarea {
+    padding: 10px 15px;
+    border-radius: 5px;
+    outline-color: #3a57e8;
+    width: 100%;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo button {
+    background-color: #3a57e8;
+    color: #fff;
+    border: 0px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo .dns-hader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo .dns-hader .dns-block1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo .dns-hader .dns-block1 .dns-tl-ttlo {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 3px 10px;
+    background-color: #B4C0FF;
+    color: #000A3F;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo .dns-hader .dns-block1 .dns-tl-ttlotraphcer {
+    display: flex;
+    align-items: center;
+    border-radius: 15px;
+    padding: 3px 10px;
+    background-color: #FFD6C0;
+    color: #3F1700;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo .dns-hader .dns-block2 {
+    position: absolute;
+    right: 10px;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo .dns-hader .dns-block2 img {
+    border-radius: 100px;
+    height: 25px;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo .dns-hader .dns-block1 .dns-tl-fcha {
+    padding: 0 5px;
+    color: #BDC1C6;
+    font-size: 0.8rem;
+}
+
+.dns-ctndorlneatepo .dns-dtlneatepo .dns-bdy {
+    padding: 10px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #33364A;
+}
+
+/* Time Line Task */
+
+/*List Comments */
+
+.dns_ltacmtros img {
+    max-width: 100%;
+    height: auto;
+}
+
+.dns_ltacmtros .ctndornp {
+    background-color: #EDF1F3;
+}
+
+.dns_ltacmtros .ctndornp {
+    background-color: #EDF1F3;
+}
+
+.dns_ltacmtros .ctndornp .dns_ctndorcmtrouser {
+    background-color: #EDF1F3;
+}
+
+.dns_ltacmtros .ctndornp .dns_ctndorcmtrouser .dns_cmtrouser {
+    padding: 0 5px;
+    color: #3a57e8;
+}
+
+.dns_ltacmtros .ctndornp .dns_ctndorcmtrouser .dns_cmtrofchareg {
+    padding: 0 5px;
+    font-size: 0.8rem;
+}
+
+/*List Comments */
+
+/*Zone Eficiency*/
+.dns_card {
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+}
+
+.dns_cardhader {
+    width: 100%;
+    padding: 15px;
+    border-bottom: 1px solid #F0F0F2;
+}
+
+.dns_cardbdy {
+    padding: 15px;
+    border-bottom: 1px solid #F0F0F2;
+}
+
+.dns_ctnerefcecy {
+    display: flex;
+    justify-content: center;
+}
+
+.percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.percent .number {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.percent .number .dns_h2 {
+    color: #3A57E8;
+    font-weight: 700;
+    font-size: 40px;
+    transition: 0.5s;
+}
+
+.percent .number .dns_h2 .dns_span {
+    font-size: 24px;
+    color: #777;
+    font-size: 30px;
+    transition: 0.5s;
+}
+
+.dns_svg {
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.dns_svg .dns_circle {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: #a4afea;
+    stroke-width: 10;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+}
+
+.dns_svg .dns_circle:nth-child(2) {
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+}
+
+.tjta:nth-child(1) .dns_svg .dns_circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 90) / 100);
+    stroke: #3A57E8;
+}
+
+.tjta:nth-child(2) .dns_svg .dns_circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 80) / 100);
+    stroke: #238195;
+}
+
+.tjta:nth-child(3) .dns_svg .dns_circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 60) / 100);
+    stroke: #7159c1;
+}
+
+/*Zone Eficiency*/
+
+
+#dtcdgorpsble {
+    display: none;
+}
+
+.dns_ctndordtrpsble {
+    position: relative;
+}
+
+.dns_ctndordtrpsble .dns_dtctndorltarpsble {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    z-index: 1;
+}
+
+.dns_ctndordtrpsble .dns_dtctndorltarpsble .dns_ltarpsble {
+    background-color: #fff;
+    border: 1px solid #CED4DA;
+    border-radius: 0px 0 10px 10px;
+    margin: 0 15px;
+    padding: 10px 15px;
+    max-height: 250px;
+    overflow-x: auto;
+}
+
+.dns_ctndordtrpsble .dns_dtctndorltarpsble .dns_ltarpsble .dns_dtdteuser {
+    cursor: pointer;
+    padding: 4px 6px;
+}
+
+.dns_ctndordtrpsble .dns_dtctndorltarpsble .dns_ltarpsble .dns_dtdteuser.slect {
+    background-color: #E8F0FE;
+}
+
+.dns_ctndordtrpsble .dns_dtctndorltarpsble .dns_ltarpsble .dns_dtdteuser:hover {
+    background-color: #E8F0FE;
+}
+
+.dns_ctndordtrpsble .dns_dtctndorltarpsble .dns_ltarpsble .dns_dtdteuser .dtecdgo {
+    display: none;
+}
+
+.dns_ctndordtrpsble .dns_dtctndorltarpsble.show {
+    opacity: 1;
+}
+
+.dns_containerform {
+    display: flex;
+}
+
+.dns_containerform .dns_content_input {
+    width: 100%;
+    padding: 5px;
+}
+
+.dns_containerform .dns_content_input .dns_input {
+    width: 100%;
+    border-radius: 10px;
+    outline: none;
+    border: 1px solid #CED4DA;
+    padding: 6px 10px;
+}
+
+@media(max-width: 575px) {
+    .dns_containerform {
+        flex-direction: column;
+    }
+
+    .dns_containerform .dns_content_input {
+        width: 100%;
+    }
+
+    .dns_containerform .dns_content_input .dns_input {
+        width: 100%;
+    }
+}
+
+.dns_bgloading {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background-color: rgb(0, 0, 0, 0.5);
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-weight: 600;
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.splineChart {
+    width: 100%;
+    height: 300px;
+}
+
+/* Main Slider */
+.dns_trashbanner {
+    top: 5px;
+    right: 5px;
+    color: #fff;
+    font-size: 2rem;
+    padding: 8px;
+    background-color: #3a57e8;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.dns_headerbox {
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+
+/* =========================================
+USER REGISTER – DNS AUTH SCOPE
+========================================= */
+
+/* Wrapper — centra el formulario y limita el ancho */
+.dns-auth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* -------- CARD -------- */
+.dns-auth .card {
+    width: 100%;
+    max-width: 1680px;
+    margin:-10px;
+    border-radius: 20px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+}
+
+.dns-auth .card-header {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.dns-auth .card-header h5 {
+    margin: 0;
+    font-weight: 700;
+    color: #25396f;
+}
+
+.dns-auth .card-body {
+    padding: 16px;
+}
+
+/* -------- LABELS -------- */
+.dns-auth label {
+    font-size: 13px;
+    font-weight: 600;
+    color:#25396f;
+    margin-bottom: 4px;
+}
+
+/* -------- INPUTS & SELECTS -------- */
+.dns-auth .form-control,
+.dns-auth .form-select {
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+}
+
+.dns-auth .form-control:focus,
+.dns-auth .form-select:focus {
+    border-color: #3a57e8;
+    box-shadow: 0 0 0 2px rgba(58,87,232,.15);
+    outline: none;
+}
+
+.dns-auth input[readonly] {
+    background: #f2f4f7;
+}
+
+/* -------- CONTRASEÑA (input group) -------- */
+.dns-auth .input-group .form-control {
+    border-right: 0;
+}
+
+.dns-auth .input-group .btn {
+    min-width: 120px;
+    border-radius: 0 8px 8px 0;
+    text-align: center;
+}
+
+.dns-auth #genPass {
+    background: #6c757d;
+    border: none;
+    color: #ffffff;
+    font-weight: 500;
+}
+
+.dns-auth #genPass:hover {
+    background: #5a6268;
+}
+
+/* -------- TELÉFONOS -------- */
+#phonesContainer .mb-3 {
+    margin-bottom: 10px;
+}
+
+.dns-auth #btnAddPhone {
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+/* -------- BOTÓN REGISTRAR -------- */
+.dns-auth .btn-primary {
+    background: #28a745 !important;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.dns-auth .btn-primary:hover {
+    background: #218838 !important;
+}
+
+/* -------- FILAS -------- */
+.dns-auth .row > div {
+    margin-bottom: 10px;
+}
+
+/* -------- RESPONSIVE -------- */
+@media (max-width: 768px) {
+
+    .dns-auth .card {
+        max-width: 100%;
+        border-radius: 14px;
+    }
+
+    .dns-auth .card-body {
+        padding: 12px;
+    }
+
+    .dns-auth .input-group .btn {
+        min-width: 100px;
+    }
+}
+
+
+/* =====================================================
+PRIVILEGIOS GI – ESTILO COMPLETO DE LA PÁGINA
+===================================================== */
+
+/* =========================
+LAYOUT GENERAL
+========================= */
+
+.dns_containerform {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    align-items: flex-end;
+}
+
+.dns_content_input {
+    flex: 1;
+}
+
+/* =========================
+RESET CONTENEDORES INTERNOS
+========================= */
+
+.dns_ctndordtrpsble,
+
+
+.dns_ctndordtrpsble {
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* =========================
+TÍTULOS (labels)
+========================= */
+
+.dns_label {
+    font-size: 13px;
+    font-weight: 600;
+    color:#25396f;
+    margin-bottom: 6px;
+    display: block;
+}
+
+/* =========================
+INPUTS Y SELECTS
+========================= */
+
+.dns_input {
+    width: 100%;
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ffffff;
+    background: #ffffff;
+    box-sizing: border-box;
+}
+
+.dns_input:focus {
+    outline: none;
+    border-color: #3a57e8;
+    box-shadow: 0 0 0 2px rgba(58,87,232,.15);
+}
+
+.dns_input::placeholder {
+    color: #9aa3b2;
+}
+
+/* campo buscar usuario más cómodo */
+#dtrpsble {
+    height: 42px;
+}
+
+/* =========================
+BOTÓN DAR PERMISO
+========================= */
+
+.dns_btnform {
+    background: #198754;
+    color: #ffffff;
+    border: none;
+    padding: 8px 90px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    min-width: 160px;
+}
+
+.dns_btnform:hover {
+    background: #157347;
+}
+
+/* =========================
+AUTOCOMPLETE / LISTA USUARIOS
+========================= */
+
+.dns_dtctndorltarpsble {
+    position: relative;
+}
+
+.dns_ltarpsble {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.12);
+    max-height: 240px;
+    overflow-y: auto;
+    z-index: 50;
+}
+
+.dns_ltarpsble div {
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.dns_ltarpsble div:hover {
+
+    background: #eef1f7;
+}
+
+/* =========================
+TABLA PRIVILEGIOS
+========================= */
+
+#tolisttable {
+    margin-top: 20px;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 6px 16px rgba(0,0,0,.08);
+    overflow: hidden;
+}
+
+#tolisttable table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0;
+}
+
+#tolisttable thead th {
+    background: #212529;
+    color: #ffffff;
+    font-weight: 600;
+    padding: 12px;
+    font-size: 14px;
+}
+
+#tolisttable tbody tr {
+    background: #f8f9fc;
+    border-bottom: 1px solid #cfd6e4;
+}
+
+#tolisttable tbody tr:nth-child(even) {
+    background: #eef1f7;
+}
+
+#tolisttable td {
+    padding: 12px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+/* texto jerárquico */
+#tolisttable td div:first-child {
+    font-weight: 600;
+    color: #3a57e8;
+}
+
+#tolisttable td div:last-child {
+    font-size: 13px;
+    color: #6c757d;
+}
+
+/* =========================
+BOTÓN ELIMINAR
+========================= */
+
+.dns_deleteprivilege {
+    background: #dc3545;
+    color: #ffffff;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.dns_deleteprivilege:hover {
+    background: #bb2d3b;
+}
+
+.dns_deleteprivilege i {
+    font-size: 16px;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+    .dns_containerform {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .dns_btnform {
+        width: 100%;
+    }
+}
+
+/*Cards de la pagina inicio*/ 
+
+.body_card {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:#1f6bff;
+    color:white;
+    height:120px;
+    border-radius:18px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.2s;
+}
+.body_ard:hover{
+    transform:scale(1.03);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+.cardspagbody{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
