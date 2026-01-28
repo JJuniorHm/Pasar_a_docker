@@ -28,4 +28,4 @@ COPY . /var/www/html/
 # Permisos
 RUN chown -R www-data:www-data /var/www/html
 
-EXPOSE 4500
+EXPOSE 80
