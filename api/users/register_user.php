@@ -3,7 +3,7 @@ header('Content-Type: application/json; charset=utf-8');
 error_reporting(E_ALL & ~E_NOTICE);
 ini_set('display_errors', 0);
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/Comsitec/includes/Sconzton.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/Sconzton.php";
 $cn = DBConnection::getInstance()->getConnection();
 
 function generarPassword($len = 8){
