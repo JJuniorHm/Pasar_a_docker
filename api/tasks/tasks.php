@@ -1,6 +1,6 @@
 <?php
 
-    require_once $_SERVER['DOCUMENT_ROOT'] . "/Comsitec/includes/Sconzton.php";
+    require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/Sconzton.php";
     $cn = DBConnection::getInstance()->getConnection();
 
     $method = $_SERVER['REQUEST_METHOD'];
