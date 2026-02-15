@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 header('Content-Type: application/json');
 
-require $_SERVER['DOCUMENT_ROOT'] . "/Comsitec/includes/Sconzton.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/Sconzton.php";
 
 $conexion = new mysqli(DB_SERVER, DB_USERNAME, DB_PASSWORD, DB_DATABASE);
 if ($conexion->connect_error) {
