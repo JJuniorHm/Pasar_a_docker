@@ -3,8 +3,8 @@ header('Content-Type: application/json; charset=utf-8');
 
 session_start();
 
-require_once $_SERVER['DOCUMENT_ROOT'] . "/Comsitec/includes/Sconzton.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/Comsitec/csses/class_lgin/lgin.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/Sconzton.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/csses/class_lgin/lgin.php";
 
 // Leer datos (JSON o form)
 $input = json_decode(file_get_contents("php://input"), true);
