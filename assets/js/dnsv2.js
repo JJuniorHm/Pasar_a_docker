@@ -13,7 +13,7 @@ $(document).ready(function() {
 
     $.ajax({
       type: "POST",
-      url: '/Comsitec/ajaxjs/lgin/lgin.php',
+      url: '/ajaxjs/lgin/lgin.php',
       data: { coduser: coduser, pword: pword },
       dataType: 'json',
       success: function(response) {
