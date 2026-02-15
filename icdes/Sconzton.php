@@ -27,7 +27,7 @@ $isCloudRun = getenv('K_SERVICE') !== false;
 // ==============================
 if ($isCloudRun) {
 
-    // ☁️ Cloud Run + Cloud SQL
+    // Cloud Run + Cloud SQL
     define('DB_SERVER', '/cloudsql/junpe-483700:us-central1:junpe');
     define('DB_USERNAME', getenv('DB_USERNAME'));
     define('DB_PASSWORD', getenv('DB_PASSWORD'));
@@ -35,7 +35,7 @@ if ($isCloudRun) {
 
 } else {
 
-    // 💻 Entorno local (XAMPP)
+    // Entorno local (XAMPP)
     define('DB_SERVER', 'localhost');
     define('DB_USERNAME', 'root');
     define('DB_PASSWORD', '');
