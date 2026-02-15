@@ -20,7 +20,7 @@ $(document).ready(function() {
 
         if (response.sttus) {
           // 👉 SIEMPRE AL INDEX
-          window.location.href = '/Comsitec/index.php';
+          window.location.href = '/index.php';
         } else {
           alert(response.msge || 'El usuario o contraseña es incorrecto.');
         }
