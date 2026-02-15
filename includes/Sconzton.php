@@ -31,7 +31,7 @@ defined('SITE_URL') || define('SITE_URL', $constants['base_url']);
 defined('HTTP_BOOTSTRAP_PATH') || define('HTTP_BOOTSTRAP_PATH', SITE_URL . 'assets/vendor/');
 defined('HTTP_CSS_PATH')       || define('HTTP_CSS_PATH', SITE_URL . 'assets/css/');
 defined('HTTP_JS_PATH')        || define('HTTP_JS_PATH', SITE_URL . 'assets/js/');
-defined('BASH_PATH')           || define('BASH_PATH', 'C:/xampp/htdocs/Comsitec/');
+defined('BASH_PATH')           || define('BASH_PATH', dirname(__DIR__) . '/');
 
 // ==============================
 // DB CONNECTION (SINGLETON)
