@@ -1,6 +1,6 @@
 <?php
 
-require $_SERVER['DOCUMENT_ROOT'] . "/Comsitec/includes/Sconzton.php";
+require $_SERVER['DOCUMENT_ROOT'] . "/includes/Sconzton.php";
 require "../../csses/user/user.php";
 
 header("Content-Type: application/json");
