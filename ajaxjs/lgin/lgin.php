@@ -1,6 +1,6 @@
 <?php
-require_once $_SERVER['DOCUMENT_ROOT'] . "/Comsitec/includes/Sconzton.php";
-require_once $_SERVER['DOCUMENT_ROOT'] . "/Comsitec/csses/class_lgin/lgin.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/includes/Sconzton.php";
+require_once $_SERVER['DOCUMENT_ROOT'] . "/csses/class_lgin/lgin.php";
 
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     echo json_encode([
