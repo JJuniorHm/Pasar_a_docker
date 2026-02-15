@@ -18,10 +18,11 @@ $constants['base_url'] = $root;
 // ==============================
 // DB CONSTANTS
 // ==============================
-defined('DB_SERVER')   || define('DB_SERVER', 'localhost');
-defined('DB_USERNAME') || define('DB_USERNAME', 'root');
-defined('DB_PASSWORD') || define('DB_PASSWORD', '');
-defined('DB_DATABASE') || define('DB_DATABASE', 'comsitec_db_business');
+define('DB_SERVER', '/cloudsql/junpe-483700:us-central1:junpe');
+define('DB_USERNAME', 'junpehpe');
+define('DB_PASSWORD', 'npg_YQS7eIVxbs6u');
+define('DB_DATABASE', 'comsitec_db_business');
+
 
 // ==============================
 // PATHS
